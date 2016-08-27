@@ -1,0 +1,31 @@
+HKCR
+{
+	TUPSDKPCDemo.COleImage.1 = s 'COleImage Class'
+	{
+		CLSID = s '{DC0C8980-E8F0-4172-AFA9-7DC4A666CDF4}'
+	}
+	TUPSDKPCDemo.COleImage = s 'COleImage Class'
+	{
+		CLSID = s '{DC0C8980-E8F0-4172-AFA9-7DC4A666CDF4}'
+		CurVer = s 'TUPSDKPCDemo.COleImage.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {DC0C8980-E8F0-4172-AFA9-7DC4A666CDF4} = s 'COleImage Class'
+		{
+			ProgID = s 'TUPSDKPCDemo.COleImage.1'
+			VersionIndependentProgID = s 'TUPSDKPCDemo.COleImage'
+			ForceRemove 'Programmable'
+			LocalServer32 = s '%MODULE%'
+			val AppID = s '%APPID%'
+			ForceRemove 'Control'
+			ForceRemove 'ToolboxBitmap32' = s '%MODULE%, 104'
+			'MiscStatus' = s '0'
+			{
+			    '1' = s '%OLEMISC%'
+			}
+			'TypeLib' = s '{A51B0FB4-D3A5-4593-BD55-E3A772D11EE7}'
+			'Version' = s '1.0'
+		}
+	}
+}

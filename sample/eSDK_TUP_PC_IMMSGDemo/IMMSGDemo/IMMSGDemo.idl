@@ -1,0 +1,45 @@
+// IMMSGDemo.idl : IDL source for IMMSGDemo
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (IMMSGDemo.tlb) and marshalling code.
+
+#include "olectl.h"
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(C7DF1093-E590-4131-95E2-624C482BA2D7),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface IOleImage : IDispatch{
+};
+
+[
+	uuid(BEAD8F06-C8CB-425C-846F-96DBA92B1152),
+	version(1.0)	
+]
+library IMMSGDemoLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(A57ADF29-4366-47FF-BB72-2504039DEFF5)		
+	]
+	dispinterface _IOleImageEvents
+	{
+		properties:
+		methods:
+	};
+	[
+		uuid(BA505317-3075-43FD-B27B-687208EDBC32),		
+		control
+	]
+	coclass OleImage
+	{
+		[default] interface IOleImage;
+		[default, source] dispinterface _IOleImageEvents;
+	};
+};

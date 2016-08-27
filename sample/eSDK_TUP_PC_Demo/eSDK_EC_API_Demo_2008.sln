@@ -1,0 +1,22 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TUPSDKPCDemo", "TUPSDKPCDemo\TUPSDKPCDemo.vcproj", "{8CC1EE79-6283-4B17-A0B1-99E19413A1EC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8CC1EE79-6283-4B17-A0B1-99E19413A1EC}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8CC1EE79-6283-4B17-A0B1-99E19413A1EC}.Debug|Win32.Build.0 = Debug|Win32
+		{8CC1EE79-6283-4B17-A0B1-99E19413A1EC}.Release|Win32.ActiveCfg = Release|Win32
+		{8CC1EE79-6283-4B17-A0B1-99E19413A1EC}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		VisualSVNWorkingCopyRoot = .
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "eSDK_TUP_PC_IM_Demo", "eSDK_TUP_PC_IM_Demo\eSDK_TUP_PC_IM_Demo.vcxproj", "{25542E9C-72F5-446B-8F51-B4582747B00E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{25542E9C-72F5-446B-8F51-B4582747B00E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{25542E9C-72F5-446B-8F51-B4582747B00E}.Debug|Win32.Build.0 = Debug|Win32
+		{25542E9C-72F5-446B-8F51-B4582747B00E}.Release|Win32.ActiveCfg = Release|Win32
+		{25542E9C-72F5-446B-8F51-B4582747B00E}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

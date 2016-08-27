@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Template|Win32">
+      <Configuration>Template</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8CC1EE79-6283-4B17-A0B1-99E19413A1EC}</ProjectGuid>
+    <RootNamespace>TUPSDKPCDemo</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <UseOfAtl>Static</UseOfAtl>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <UseOfAtl>Static</UseOfAtl>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\output\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\output\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\..\src\TUPSDK\call\inc;..\..\..\src\TUPSDK\im\inc;..\..\..\src\TUPSDK\DataConf\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0804</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <RegisterOutput>false</RegisterOutput>
+      <AdditionalDependencies>tup_im_clib.lib;tup_http.lib;tup_httpofflinefile.lib;tup_offlinefile.lib;tup_callservice.lib;LogOne.lib;tup_os_adapter.lib;tup_conf_sdk.lib;IPHlpApi.Lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\src\TUPSDK\im\release\lib;..\..\..\src\TUPSDK\call\release\lib;..\..\..\src\TUPSDK\DataConf;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\..\..\src\TUPSDK\IM\inc;..\..\..\src\TUPSDK\Call\inc;..\..\..\src\TUPSDK\DataConf\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0804</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <RegisterOutput>false</RegisterOutput>
+      <AdditionalDependencies>tup_im_clib.lib;tup_http.lib;tup_httpofflinefile.lib;tup_offlinefile.lib;tup_callservice.lib;LogOne.lib;tup_os_adapter.lib;tup_conf_sdk.lib;IPHlpApi.Lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\src\TUPSDK\im\release\lib;..\..\..\src\TUPSDK\call\release\lib;..\..\..\src\TUPSDK\DataConf;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="CallCtrlDlg.cpp" />
+    <ClCompile Include="CallSetDlg.cpp" />
+    <ClCompile Include="COleImage.cpp" />
+    <ClCompile Include="ConfDlg.cpp" />
+    <ClCompile Include="ContactDlg.cpp" />
+    <ClCompile Include="Data.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="DataConfDlg.cpp" />
+    <ClCompile Include="DetailDlg.cpp" />
+    <ClCompile Include="DialPadDlg.cpp" />
+    <ClCompile Include="EntAddrDlg.cpp" />
+    <ClCompile Include="FileSetDlg.cpp" />
+    <ClCompile Include="GroupAddDlg.cpp" />
+    <ClCompile Include="GroupDlg.cpp" />
+    <ClCompile Include="GroupInviteDlg.cpp" />
+    <ClCompile Include="GroupSearchDlg.cpp" />
+    <ClCompile Include="ImageStatic.cpp" />
+    <ClCompile Include="IMDlg.cpp" />
+    <ClCompile Include="IMManage.cpp" />
+    <ClCompile Include="LevelDlg.cpp" />
+    <ClCompile Include="LoginDlg.cpp" />
+    <ClCompile Include="MainDlg.cpp" />
+    <ClCompile Include="MediaSetDlg.cpp" />
+    <ClCompile Include="NewCallDlg.cpp" />
+    <ClCompile Include="NotifyCallBack.cpp" />
+    <ClCompile Include="RichEditCtrlEx.cpp" />
+    <ClCompile Include="SelectDlg.cpp" />
+    <ClCompile Include="SelfSetDlg.cpp" />
+    <ClCompile Include="SettingDlg.cpp" />
+    <ClCompile Include="ShareStatic.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Tools.cpp" />
+    <ClCompile Include="TransDlg.cpp" />
+    <ClCompile Include="TUPSDKPCDemo.cpp" />
+    <ClCompile Include="UserGroupDlg.cpp" />
+    <ClCompile Include="VideoPreviewDlg.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="TUPSDKPCDemo.idl">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</MkTypLibCompatible>
+      <TargetEnvironment Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Win32</TargetEnvironment>
+      <GenerateStublessProxies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateStublessProxies>
+      <TypeLibraryName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)$(ProjectName).tlb</TypeLibraryName>
+      <HeaderFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectName)_i.h</HeaderFileName>
+      <InterfaceIdentifierFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectName)_i.c</InterfaceIdentifierFileName>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</MkTypLibCompatible>
+      <TargetEnvironment Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Win32</TargetEnvironment>
+      <GenerateStublessProxies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateStublessProxies>
+      <TypeLibraryName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)$(ProjectName).tlb</TypeLibraryName>
+      <HeaderFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">TUPSDKPCDemo_i.h</HeaderFileName>
+      <InterfaceIdentifierFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">TUPSDKPCDemo_i.c</InterfaceIdentifierFileName>
+    </Midl>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="_ICOleImageEvents_CP.h" />
+    <ClInclude Include="CallCtrlDlg.h" />
+    <ClInclude Include="CallSetDlg.h" />
+    <ClInclude Include="COleImage.h" />
+    <ClInclude Include="ConfDlg.h" />
+    <ClInclude Include="ContactDlg.h" />
+    <ClInclude Include="Data.h" />
+    <ClInclude Include="DataConfDlg.h" />
+    <ClInclude Include="DetailDlg.h" />
+    <ClInclude Include="DialPadDlg.h" />
+    <ClInclude Include="EntAddrDlg.h" />
+    <ClInclude Include="FileSetDlg.h" />
+    <ClInclude Include="GroupAddDlg.h" />
+    <ClInclude Include="GroupDlg.h" />
+    <ClInclude Include="GroupInviteDlg.h" />
+    <ClInclude Include="GroupSearchDlg.h" />
+    <ClInclude Include="ImageStatic.h" />
+    <ClInclude Include="IMDlg.h" />
+    <ClInclude Include="IMManage.h" />
+    <ClInclude Include="LevelDlg.h" />
+    <ClInclude Include="LoginDlg.h" />
+    <ClInclude Include="MainDlg.h" />
+    <ClInclude Include="MediaSetDlg.h" />
+    <ClInclude Include="NewCallDlg.h" />
+    <ClInclude Include="NotifyCallBack.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="RichEditCtrlEx.h" />
+    <ClInclude Include="SelectDlg.h" />
+    <ClInclude Include="SelfSetDlg.h" />
+    <ClInclude Include="SettingDlg.h" />
+    <ClInclude Include="ShareStatic.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="Tools.h" />
+    <ClInclude Include="TransDlg.h" />
+    <ClInclude Include="TUPSDKPCDemo.h" />
+    <ClInclude Include="UserGroupDlg.h" />
+    <ClInclude Include="VideoPreviewDlg.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="COleImage.bmp" />
+    <None Include="COleImage.rgs" />
+    <None Include="res\custom_contact.bmp" />
+    <None Include="res\friend.bmp" />
+    <None Include="res\icon1.ico" />
+    <None Include="res\icon2.ico" />
+    <None Include="res\icon_onl.ico" />
+    <None Include="res\lp.bmp" />
+    <None Include="res\lp.png" />
+    <None Include="res\SmartCallIconSmall.bmp" />
+    <None Include="res\SmartCallIconSmall_Press.bmp" />
+    <None Include="res\tree_Friend_fold_hot.bmp" />
+    <None Include="res\tree_Friend_unfold_nor.bmp" />
+    <None Include="res\TUPSDKPCDemo.ico" />
+    <None Include="res\TUPSDKPCDemo.rc2" />
+    <None Include="TUPSDKPCDemo.rgs" />
+    <None Include="COleImage.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="TUPSDKPCDemo.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="TUPSDKPCDemo.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
